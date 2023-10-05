@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <a href="houses.html" class="overlay"></a>
+
+    <img src="images/texture.jpg" alt="texture-jpg" class="bg">
+
+    <h2 class="page3">
+    </h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <div class="image-container">
+                    <img src="images/inperson.jpg" alt="Image 1">
+                </div>
+                in person
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <img src="images/texting.png" alt="Image 2">
+                </div>
+                texting
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <img src="images/reading.jpg" alt="Image 3">
+                </div>
+                books
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <img src="images/movie.jpg" alt="Image 4">
+                </div>
+                movies
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <img src="images/music.jpg" alt="Image 5">
+                </div>
+                music
+            </div>
+            <div class="column">
+                <div class="image-container">
+                    <img src="images/journaling.png" alt="Image 6">
+                </div>
+                journaling
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const page3 = document.querySelector(".page3");
+    
+        const text = "Where do we find conversations?";
+    
+        let index = 0;
+        let timer;
+    
+        function typeText() {
+
+            if (index < text.length) {
+                page3.innerHTML += text.charAt(index);
+                index++;
+                timer = setTimeout(typeText, 100);
+            }
+        }
+        window.addEventListener("load", typeText);
+    </script>
+    
+</body>
+</html>

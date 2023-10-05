@@ -1,0 +1,302 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.rolling-words {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: roll 20s linear infinite;
+    font-size: 30px; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden;
+    color: #100f0f;
+    display: flex; /* Use flexbox to ensure content stays in one line */
+}
+
+@keyframes roll {
+    0% {
+        transform: translateX(100%); /* Start off screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f2f2f2;
+}
+
+
+h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 200px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); 
+    z-index: 2; 
+    cursor: pointer; 
+}
+
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel Decorative', cursive;
+    margin-top: 100px; 
+    margin-top: 200px; 
+    text-align: center;
+    padding: 0 80px;
+}
+
+
+.page2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 70px;
+    position:fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: Left;
+    width: 100%;
+    margin-top: 50px; 
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100vh;
+}
+
+.column {
+    width: calc(50% - 10px);
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 5px;
+    height: 200px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    width: 150px; /* Set a fixed width for the image container */
+    height: 150px; /* Set a fixed height for the image container */
+    overflow: hidden;
+    margin: 0 auto; /* Center the image container horizontally */
+}
+
+.column img {
+    width: 100%; /* Ensure all images occupy the entire image container */
+    height: 100%; /* Ensure all images occupy the entire image container */
+    object-fit: cover; /* Crop images to fit within the container without stretching */
+}
+
+.page3 {
+    font-family: 'Cinzel Decorative';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
+
+.house-button {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    display: flex;
+}
+
+.house-group {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+
+.house-link {
+    text-decoration: none;
+}
+
+.house,
+.house2,
+.house3,
+.house4,
+.house5,
+.house6,
+.house7,
+.house8,
+.house9 {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hover,
+.hover2,
+.hover3,
+.hover4,
+.hover5,
+.hover6,
+.hover7,
+.hover8,
+.hover9 {
+    width: 200px;
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+}
+
+.house-group:hover .hover,
+.house-group:hover .hover2,
+.house-group:hover .hover3,
+.house-group:hover .hover4,
+.house-group:hover .hover5,
+.house-group:hover .hover6,
+.house-group:hover .hover7,
+.house-group:hover .hover8,
+.house-group:hover .hover9 {
+    display: block;
+}
+
+/* Adjust the positioning for each house group */
+.house-group:nth-child(1) .hover,
+.house-group:nth-child(2) .hover2,
+.house-group:nth-child(3) .hover3,
+.house-group:nth-child(4) .hover4,
+.house-group:nth-child(5) .hover5,
+.house-group:nth-child(6) .hover6,
+.house-group:nth-child(7) .hover7,
+.house-group:nth-child(8) .hover8,
+.house-group:nth-child(9) .hover9 {
+    top: 0;
+    left: 0;
+}
+
+
+/* Center the container and stack the images */
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style for the JPG image */
+.centered-image {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.centered-gif {
+    max-width: 16%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Position it on top of the JPG */
+    top: 190px; /* Adjust the distance from the top */
+    left: 48.5%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally precisely */
+}
+
+
+.circle-buttons {
+    position: fixed;
+    top: 0;
+    right: 50px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.circle-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pastel1 {
+    background-color: #FFC3A0;
+}
+
+.pastel2 {
+    background-color: #A0E7E5;
+}
+
+.pastel3 {
+    background-color: #E6A0E6;
+}
+
+.pastel4 {
+    background-color: #FFED97;
+}
+
+.pastel5 {
+    background-color: #dafeb3;
+}
+
+/* Add CSS to define the background color for pastel3 */
+.background-color-pastel3 {
+    background-color: #E6A0E6;
+}

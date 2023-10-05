@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="center-screen">
+        <img src="images/momtext.png" alt="mom-png" class="centered-image">
+        <img src="images/text.gif" alt="text-png" class="centered-gif">
+    </div>
+    <div class="circle-buttons">
+        <a href="h1.html" class="circle-button pastel1"></a>
+        <a href="h2.html" class="circle-button pastel2"></a>
+        <a href="#" class="circle-button pastel3" id="changeColorButton"></a>
+        <a href="h4.html" class="circle-button pastel4"></a>
+        <a href="h5.html" class="circle-button pastel5"></a>
+    </div>
+
+    <script>
+        // Add an event listener to the third button
+        document.getElementById("changeColorButton").addEventListener("click", function() {
+            // Add a class to the body element to change the background color
+            document.body.classList.add("background-color-pastel3");
+
+            // Wait for 3 seconds (3000 milliseconds)
+            setTimeout(function() {
+                // Redirect to the next page
+                window.location.href = "h3.html"; // Replace with your desired page URL
+            }, 3000); // 3000 milliseconds (3 seconds)
+        });
+    </script>
+</body>
+</html>
